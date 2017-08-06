@@ -1,5 +1,5 @@
-FROM hypriot/rpi-ruby
-MAINTAINER steffen <torkild@retvedt.no>
+FROM resin/raspberrypi3-debian
+MAINTAINER torkildr
 
 RUN [ "cross-build-start" ]
  
@@ -10,6 +10,7 @@ RUN apt-get update \
       libpq-dev \
       libssl-dev \
       libsqlite3-dev \
+      ruby \
       ruby-dev \
       python3 \
       python3-pip \
