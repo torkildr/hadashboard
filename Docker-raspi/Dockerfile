@@ -1,6 +1,8 @@
 FROM hypriot/rpi-ruby
-MAINTAINER steffen <devnull@snizzle.org>
+MAINTAINER steffen <torkild@retvedt.no>
 
+RUN [ "cross-build-start" ]
+ 
 RUN apt-get update \
  && apt-get install -y \
       sqlite \
@@ -23,6 +25,7 @@ RUN gem install dashing \
  && pip3 install daemonize sseclient configobj \
  && pip3 install --upgrade requests
 
+RUN [ "cross-build-end" ]
 
 EXPOSE 3030
 
