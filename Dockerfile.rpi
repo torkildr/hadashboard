@@ -19,7 +19,7 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-COPY .. .
+COPY . .
 
 RUN gem install dashing \
  && gem install bundler \
